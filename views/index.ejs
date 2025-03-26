@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>TopPoC</title></head>
+<body>
+  <% if (!user) { %>
+    <a href="/auth/google">Login with Google</a>
+  <% } else { %>
+    <h2>Hello, <%= user.name %></h2>
+    <a href="/logout">Logout</a>
+  <% } %>
+</body>
+</html>

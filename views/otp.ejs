@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Enter OTP</title></head>
+<body>
+  <% if (qr) { %>
+    <p>Scan this QR code with Google Authenticator:</p>
+    <img src="<%= qr %>" />
+  <% } %>
+  <form action="/2fa" method="POST">
+    <input name="token" placeholder="Enter 6-digit OTP" required />
+    <button type="submit">Verify</button>
+  </form>
+</body>
+</html>
